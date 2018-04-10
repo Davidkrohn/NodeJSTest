@@ -1,8 +1,6 @@
-var test = require('unit.js');
-var str = 'Hello, world!';
+const express = require('express')
+const app = express()
 
-test.string(str).startsWith('Hello');
-
-if (test.string(str).startsWith('Hello')) {
-  console.log('Passed');
-}
+app.get('/', function (req, res) {
+    res.render('index');
+})
